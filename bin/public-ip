@@ -1,0 +1,10 @@
+#!/usr/bin/env python2
+
+import urllib
+
+def main():
+  data = urllib.urlopen("http://checkip.dyndns.org/").read()
+  print data.partition("Address:")[2].partition("<")[0].strip()
+
+if __name__ == "__main__":
+  main()

@@ -1,0 +1,43 @@
+#!/bin/bash
+
+VIM_BASE_DIR="$HOME/.vim"
+PLUGIN_PATH="$VIM_BASE_DIR/bundle"
+PLUGIN_FILE="$VIM_BASE_DIR/PLUGINS.txt"
+
+if [ -e "$VIM_BASE_DIR/autoload" ] &&
+   [ -e "$VIM_BASE_DIR/autoload/pathogen.vim" ]; then
+  echo "pathogen.vim installed"
+else
+  echo "Installing pathogen.vim"
+  mkdir -p "$VIM_BASE_DIR/autoload"
+  mkdir -p "$PLUGIN_PATH"
+  curl -Sso "$VIM_BASE_DIR/autoload/pathogen.vim" \
+    https://raw.github.com/tpope/vim-pathogen/master/autoload/pathogen.vim
+fi
+
+cat $PLUGIN_FILE | while read line
+do
+  if [ -z "$line" ]; then
+    continue
+  fi
+
+  if [ -z "$NAME" ]; then
+    NAME=$line
+    continue
+  fi
+
+  if [ -z "$REPO" ]; then
+    REPO=$line
+  fi
+
+  if [ -d $PLUGIN_PATH/$NAME ]; then
+    echo "$NAME already installed"
+  else
+    echo "Installing $NAME"
+    git clone $REPO "$PLUGIN_PATH/$NAME"
+  fi
+
+  unset REPO
+  unset NAME
+
+done

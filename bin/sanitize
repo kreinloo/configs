@@ -1,0 +1,13 @@
+#!/bin/bash
+
+if [ -z "$1" ]; then
+  echo "Usage: $0 <folder>"
+  exit 1
+fi
+
+if [ -d "$1" ]; then
+  echo -n "Sanitizing $1... "
+  find $1 -type f -exec chmod 644 {} \;
+  find $1 -type d -exec chmod 755 {} \;
+  echo "Done"
+fi

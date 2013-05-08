@@ -1,0 +1,30 @@
+URxvt.geometry:        92x42
+URxvt.scrollstyle:     plain
+URxvt.scrollBar_right: true
+URxvt.font:            -*-tamsyn-medium-*-*-*-15-*-*-*-*-*-*-*
+URxvt.termName:        screen-256color
+URxvt.cursorBlink:     true
+
+URxvt.keysym.C-Up:     \033[1;5A
+URxvt.keysym.C-Down:   \033[1;5B
+URxvt.keysym.C-Right:  \033[1;5C
+URxvt.keysym.C-Left:   \033[1;5D
+
+URxvt.keysym.M-Up:     \033[1;3A
+URxvt.keysym.M-Down:   \033[1;3B
+URxvt.keysym.M-Right:  \033[1;3C
+URxvt.keysym.M-Left:   \033[1;3D
+
+URxvt.keysym.F2:       \033OQ
+URxvt.keysym.F3:       \033OR
+URxvt.keysym.F4:       \033OS
+
+URxvt.iso14755_52:     false
+
+Xft.autohint:          1
+Xft.lcdfilter:         lcddefault
+Xft.hintstyle:         hintfull
+Xft.hinting:           1
+Xft.antialias:         1
+Xft.rgba:              rgb
+Xft.dpi:               96
