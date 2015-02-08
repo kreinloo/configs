@@ -1,0 +1,9 @@
+[user]
+  name = Kris Reinloo
+[merge]
+  tool = vimdiff
+[core]
+  editor = vim
+[color]
+  diff = auto
+  ui = 1
