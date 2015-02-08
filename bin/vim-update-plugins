@@ -1,13 +1,13 @@
 #!/bin/bash
 
-PLUGIN_PATH="$HOME/.vim/bundle"
+PLUGIN_FOLDER="$HOME/.vim/bundle"
 if [ "$1" ]; then
-  PLUGIN_PATH="$1"
+  PLUGIN_FOLDER="$1"
 fi
 
-for plugin in $PLUGIN_PATH/*; do
-  cd $plugin
-  echo "Updating $plugin"
+for PLUGIN in $PLUGIN_FOLDER/*; do
+  cd $PLUGIN
+  echo "Updating $PLUGIN"
   git pull
-  cd $PLUGIN_PATH
+  cd $PLUGIN_FOLDER
 done

@@ -1,18 +1,20 @@
 #!/bin/bash
 
-VIM_BASE_DIR="$HOME/.vim"
-PLUGIN_PATH="$VIM_BASE_DIR/bundle"
-PLUGIN_FILE="$VIM_BASE_DIR/PLUGINS.txt"
+VIM_FOLDER="$HOME/.vim"
+PLUGIN_FOLDER="$VIM_FOLDER/bundle"
+PLUGIN_FILE="$VIM_FOLDER/PLUGINS.txt"
 
-if [ -e "$VIM_BASE_DIR/autoload" ] &&
-   [ -e "$VIM_BASE_DIR/autoload/pathogen.vim" ]; then
-  echo "pathogen.vim installed"
+if [ -e "$VIM_FOLDER/autoload" ] &&
+   [ -e "$VIM_FOLDER/autoload/pathogen.vim" ]; then
+  echo "Pathogen already installed"
 else
-  echo "Installing pathogen.vim"
-  mkdir -p "$VIM_BASE_DIR/autoload"
-  mkdir -p "$PLUGIN_PATH"
-  curl -Sso "$VIM_BASE_DIR/autoload/pathogen.vim" \
-    https://raw.github.com/tpope/vim-pathogen/master/autoload/pathogen.vim
+  echo "Installing pathogen..."
+  mkdir -p "$VIM_FOLDER/autoload"
+  curl -Sso "$VIM_FOLDER/autoload/pathogen.vim" \
+    https://raw.githubusercontent.com/tpope/vim-pathogen/master/autoload/pathogen.vim
+  echo "Creating PLUGIN folder..."
+  mkdir -p "$PLUGIN_FOLDER"
+  echo "Done!"
 fi
 
 cat $PLUGIN_FILE | while read line
@@ -21,23 +23,23 @@ do
     continue
   fi
 
-  if [ -z "$NAME" ]; then
-    NAME=$line
+  if [ -z "$PLUGIN_NAME" ]; then
+    PLUGIN_NAME=$line
     continue
   fi
 
-  if [ -z "$REPO" ]; then
-    REPO=$line
+  if [ -z "$PLUGIN_SRC" ]; then
+    PLUGIN_SRC=$line
   fi
 
-  if [ -d $PLUGIN_PATH/$NAME ]; then
-    echo "$NAME already installed"
+  if [ -d $PLUGIN_FOLDER/$PLUGIN_NAME ]; then
+    echo "$PLUGIN_NAME already installed"
   else
-    echo "Installing $NAME"
-    git clone $REPO "$PLUGIN_PATH/$NAME"
+    echo "Installing $PLUGIN_NAME"
+    git clone $PLUGIN_SRC "$PLUGIN_FOLDER/$PLUGIN_NAME"
   fi
 
-  unset REPO
-  unset NAME
+  unset PLUGIN_SRC
+  unset PLUGIN_NAME
 
 done
