@@ -10,7 +10,7 @@ function install_config()
   fi
   echo "Installing $1..."
   CONFIG_PATH="$INSTALL_PATH/.$1"
-  if [ -e $CONFIG_PATH ]; then
+  if [ -e $CONFIG_PATH ] || [ -L $CONFIG_PATH ] ; then
     #mv $CONFIG_PATH "$CONFIG_PATH.orig"
     rm $CONFIG_PATH
   fi

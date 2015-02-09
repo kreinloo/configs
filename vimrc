@@ -1,7 +1,6 @@
 "
-"
-" .vimrc
-"
+"  Kris Reinloo
+"  2015
 "
 
 execute pathogen#infect()
@@ -29,31 +28,11 @@ set textwidth=80
 set colorcolumn=80
 set nocp
 set term=xterm-256color
-
-"set guifont=Tamsyn\ 12
-"set guioptions-=l
-"set guioptions-=L
-"set guioptions-=T
-"set nocursorline
-"set spell
-
 set foldmethod=syntax
-"set rtp+=~/.vim/bundle/powerline/powerline/bindings/vim
-
-"let g:solarized_termtrans=1
-"let g:solarized_termcolors=256
-"let g:solarized_italic=0
-"let g:solarized_contrast="normal"
-
 set background=dark
-colorscheme base16-default
-
 set laststatus=2
-let g:acp_enableAtStartup = 0
-let g:neocomplcache_enable_at_startup = 1
-let g:neocomplcache_enable_smart_case = 1
-let g:neocomplcache_enable_underbar_completion = 1
-let g:neocomplcache_min_syntax_length = 1
+
+colorscheme base16-default
 
 "inoremap <expr><Tab> pumvisible() ? "\<C-n>" : "\<Tab>"
 nnoremap ,cd :cd %:p:h<CR>:pwd<CR>
