@@ -42,6 +42,14 @@ nmap k gk
 
 nmap <F8> :NERDTreeTabsToggle<CR>
 nmap <F9> :TagbarToggle<CR>
+
+nmap ¡ 1gt
+nmap ™ 2gt
+nmap £ 3gt
+nmap ¢ 4gt
+nmap ∞ 5gt
+nmap § 6gt
+nmap ¶ 7gt
 nmap <A-1> 1gt
 nmap <A-2> 2gt
 nmap <A-3> 3gt
@@ -56,6 +64,9 @@ nmap <C-Left>  <ESC>:tabprev<CR>
 
 nmap <C-t> :tabedit<CR>
 nmap <C-w> :q<CR>
+nmap † :tabedit<CR>
+nmap ∑ :q<CR>
+
 nmap <C-f> vipgq<CR>
 
 nmap <silent> <A-Up>    :wincmd k<CR>
