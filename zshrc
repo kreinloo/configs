@@ -58,9 +58,8 @@ alias grep="grep --color=auto"
 alias egrep="egrep --color=auto"
 alias fgrep="fgrep --color=auto"
 
-alias pi="pacman -Qi"
-alias prs="sudo pacman -Rcnssuv"
-alias pr="sudo pacman -Rcnsuv"
+alias subl="/Applications/Sublime\ Text.app/Contents/SharedSupport/bin/subl"
+alias gpg="gpg2"
 
 # Linux
 #bindkey ";5D" backward-word
