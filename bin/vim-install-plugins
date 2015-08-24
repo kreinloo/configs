@@ -10,8 +10,7 @@ if [ -e "$VIM_FOLDER/autoload" ] &&
 else
   echo "Installing pathogen..."
   mkdir -p "$VIM_FOLDER/autoload"
-  curl -Sso "$VIM_FOLDER/autoload/pathogen.vim" \
-    https://raw.githubusercontent.com/tpope/vim-pathogen/master/autoload/pathogen.vim
+  curl -LSso "$VIM_FOLDER/autoload/pathogen.vim" https://tpo.pe/pathogen.vim
   echo "Creating PLUGIN folder..."
   mkdir -p "$PLUGIN_FOLDER"
   echo "Done!"

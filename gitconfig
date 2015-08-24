@@ -1,5 +1,6 @@
 [user]
   name = Kris Reinloo
+  email = kreinloo@users.noreply.github.com
 [merge]
   tool = vimdiff
 [core]
