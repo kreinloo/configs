@@ -1,6 +1,7 @@
 [ui]
 username = Kris Reinloo <not-a-real@email.lan>
 editor = vim
+
 [extensions]
 color =
 extdiff =
