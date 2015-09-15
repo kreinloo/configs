@@ -1,0 +1,20 @@
+[ui]
+username = Kris Reinloo <not-a-real@email.lan>
+editor = vim
+[extensions]
+color =
+extdiff =
+shelve =
+strip =
+pager =
+
+[color]
+mode = ansi
+
+[extdiff]
+cmd.wdiff = cwdiff
+
+[pager]
+pager = LESS='FRSXQ' less
+quiet = True
+attend = outgoing,incoming,diff,status,log,qdiff,blame,annotate,pdiff,glog
