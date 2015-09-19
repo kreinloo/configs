@@ -24,10 +24,10 @@ install_config "gitconfig"
 install_config "vim"
 install_config "vimrc"
 install_config "zshrc"
+install_config "tmux.conf"
 
 if [[ "$(uname)" == "Linux" ]]; then
   install_config "xinitrc"
   install_config "Xresources"
-  install_config "tmux.conf"
   #install_config "fonts.conf"
 fi
