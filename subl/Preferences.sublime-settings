@@ -1,0 +1,55 @@
+{
+	"auto_complete_commit_on_tab": true,
+	"auto_complete_delay": 1,
+	"auto_complete_with_fields": true,
+	"bold_folder_labels": true,
+	"caret_style": "smooth",
+	"close_windows_when_empty": false,
+	"color_scheme": "Packages/Theme - Spacegray/base16-ocean.dark.tmTheme",
+	"create_window_at_startup": false,
+	"default_line_ending": "unix",
+	"draw_indent_guides": true,
+	"draw_minimap_border": true,
+	"ensure_newline_at_eof_on_save": true,
+	"folder_exclude_patterns":
+	[
+		".git"
+	],
+	"font_face": "Source Code Pro",
+	"font_size": 12,
+	"highlight_line": false,
+	"highlight_modified_tabs": true,
+	"ignored_packages":
+	[
+		""
+	],
+	"ignored_words":
+	[
+	],
+	"indent_guide_options":
+	[
+		"draw_normal"
+	],
+	"inverse_caret_state": true,
+	"line_padding_bottom": 1,
+	"margin": 0,
+	"open_files_in_new_window": false,
+	"remember_open_files": false,
+	"rulers":
+	[
+		80
+	],
+	"spacegray_sidebar_font_small": true,
+	"spacegray_sidebar_tree_small": true,
+	"spacegray_tabs_auto_width": true,
+	"spacegray_tabs_font_small": true,
+	"spacegray_tabs_normal": true,
+	"spell_check": false,
+	"tab_size": 2,
+	"theme": "Spacegray.sublime-theme",
+	"translate_tabs_to_spaces": true,
+	"tree_animation_enabled": true,
+	"trim_trailing_white_space_on_save": true,
+	"vintage_start_in_command_mode": true,
+	"word_wrap": false
+}

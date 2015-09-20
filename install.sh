@@ -4,17 +4,28 @@ INSTALL_PATH="$HOME"
 
 function install_config()
 {
-  if [ ! -e $1 ]; then
+  if [ ! -e "$1" ]; then
     echo "$1 not found, skipping..."
     return
   fi
-  echo "Installing $1..."
-  CONFIG_PATH="$INSTALL_PATH/.$1"
-  if [ -e $CONFIG_PATH ] || [ -L $CONFIG_PATH ] ; then
-    #mv $CONFIG_PATH "$CONFIG_PATH.orig"
-    rm $CONFIG_PATH
+
+  CONFIG_NAME="$(basename "$1")"
+  echo "Installing $CONFIG_NAME..."
+
+  if [ -z "$2" ]; then
+    CONFIG_PATH="$INSTALL_PATH/.$CONFIG_NAME"
+  else
+    CONFIG_PATH="$INSTALL_PATH/$2/$CONFIG_NAME"
   fi
-  ln -s "$PWD/$1" $CONFIG_PATH
+
+  if [ -e "$CONFIG_PATH" ] || [ -L "$CONFIG_PATH" ] ; then
+    #mv $CONFIG_PATH "$CONFIG_PATH.orig"
+    echo "...removing $CONFIG_PATH"
+    rm "$CONFIG_PATH"
+  fi
+
+  ln -s "$PWD/$1" "$CONFIG_PATH"
+  echo "...$CONFIG_PATH OK"
 }
 
 # files
@@ -26,8 +37,17 @@ install_config "vimrc"
 install_config "zshrc"
 install_config "tmux.conf"
 
-if [[ "$(uname)" == "Linux" ]]; then
+if [ "$(uname)" == "Linux" ]; then
   install_config "xinitrc"
   install_config "Xresources"
   #install_config "fonts.conf"
+  install_config "Preferences.sublime-settings" \
+    ".config/sublime-text-3/Packages/User"
+  install_config "subl/Package Control.sublime-settings" \
+    ".config/sublime-text-3/Packages/User"
+elif [ "$(uname)" == "Darwin" ]; then
+  install_config "subl/Preferences.sublime-settings" \
+    "Library/Application Support/Sublime Text 3/Packages/User"
+  install_config "subl/Package Control.sublime-settings" \
+    "Library/Application Support/Sublime Text 3/Packages/User"
 fi
