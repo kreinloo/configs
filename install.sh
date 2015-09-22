@@ -36,12 +36,13 @@ install_config "vim"
 install_config "vimrc"
 install_config "zshrc"
 install_config "tmux.conf"
+install_config "hgrc"
 
 if [ "$(uname)" == "Linux" ]; then
   install_config "xinitrc"
   install_config "Xresources"
   #install_config "fonts.conf"
-  install_config "Preferences.sublime-settings" \
+  install_config "subl/Preferences.sublime-settings" \
     ".config/sublime-text-3/Packages/User"
   install_config "subl/Package Control.sublime-settings" \
     ".config/sublime-text-3/Packages/User"
