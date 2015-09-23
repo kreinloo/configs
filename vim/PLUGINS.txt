@@ -33,3 +33,6 @@ git@github.com:ervandew/supertab.git
 
 vim-multiple-cursors
 git@github.com:terryma/vim-multiple-cursors.git
+
+vim-airline
+https://github.com/bling/vim-airline.git

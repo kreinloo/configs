@@ -32,7 +32,8 @@ set foldmethod=syntax
 set background=dark
 set laststatus=2
 
-colorscheme base16-default
+let base16colorspace=256
+colorscheme base16-ocean
 
 "inoremap <expr><Tab> pumvisible() ? "\<C-n>" : "\<Tab>"
 nnoremap ,cd :cd %:p:h<CR>:pwd<CR>
@@ -77,3 +78,5 @@ nmap <silent> <A-Right> :wincmd l<CR>
 let g:nerdtree_tabs_open_on_console_startup = 1
 let g:nerdtree_tabs_no_startup_for_diff = 0
 let g:nerdtree_tabs_smart_startup_focus = 1
+
+let g:airline_powerline_fonts = 1

@@ -5,8 +5,10 @@
 	],
 	"installed_packages":
 	[
+		"All Autocomplete",
 		"Better CoffeeScript",
 		"GitGutter",
+		"Gradle_Language",
 		"HTMLBeautify",
 		"Package Control",
 		"Pretty JSON",
