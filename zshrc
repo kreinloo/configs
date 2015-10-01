@@ -37,8 +37,8 @@ q="%{$reset_color%}"
 # No 2
 #PROMPT="[$b%n$q][$m%m$q][$y%~$q] $ "
 
-PROMPT="$b%n$y@$m%m $g→ $c%~
-$r$ $q"
+PROMPT="%B$w┌╼ $b%n$y@$m%m $g→ $c%~
+$w└╼ $r$ $q%b"
 
 #RPROMPT="$bl black $g green $b blue $c cyan $r red $y yellow $m magenta $w white"
 
@@ -62,8 +62,8 @@ alias subl="/Applications/Sublime\ Text.app/Contents/SharedSupport/bin/subl"
 alias gpg="gpg2"
 
 # Linux
-#bindkey ";5D" backward-word
-#bindkey ";5C" forward-word
+bindkey "3D" backward-word
+bindkey "3C" forward-word
 
 # OS X
 bindkey "[D" backward-word
