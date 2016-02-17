@@ -62,8 +62,8 @@ alias subl="/Applications/Sublime\ Text.app/Contents/SharedSupport/bin/subl"
 alias gpg="gpg2"
 
 # Linux
-bindkey "3D" backward-word
-bindkey "3C" forward-word
+bindkey "5D" backward-word
+bindkey "5C" forward-word
 
 # OS X
 bindkey "[D" backward-word
