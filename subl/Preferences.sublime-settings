@@ -15,8 +15,8 @@
 	[
 		".git"
 	],
-	"font_face": "Source Code Pro",
-	"font_size": 12,
+	"font_face": "Tamsyn",
+	"font_size": 11,
 	"highlight_line": false,
 	"highlight_modified_tabs": true,
 	"ignored_packages":
@@ -39,10 +39,10 @@
 	[
 		80
 	],
-	"spacegray_sidebar_font_small": true,
+	"spacegray_sidebar_font_small": false,
 	"spacegray_sidebar_tree_small": true,
 	"spacegray_tabs_auto_width": true,
-	"spacegray_tabs_font_small": true,
+	"spacegray_tabs_font_small": false,
 	"spacegray_tabs_normal": true,
 	"spell_check": false,
 	"tab_size": 2,
