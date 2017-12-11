@@ -1,20 +1,40 @@
 "
 "  Kris Reinloo
-"  2015
+"  .vimrc
 "
 
-execute pathogen#infect()
+" vim-plug settings
+if empty(glob('~/.vim/autoload/plug.vim'))
+    silent !curl -fLo ~/.vim/autoload/plug.vim --create-dirs
+        \ https://raw.githubusercontent.com/junegunn/vim-plug/master/plug.vim
+    autocmd VimEnter * PlugInstall --sync | source $MYVIMRC
+endif
+
+call plug#begin('~/.vim/plugged')
+Plug 'chriskempson/base16-vim'
+Plug 'ctrlpvim/ctrlp.vim'
+Plug 'scrooloose/nerdtree'
+Plug 'Raimondi/delimitMate'
+Plug 'jistr/vim-nerdtree-tabs'
+Plug 'ervandew/supertab'
+Plug 'terryma/vim-multiple-cursors'
+Plug 'vim-airline/vim-airline'
+" Plug 'altercation/vim-colors-solarized'
+" Plug 'github.com/majutsushi/tagbar'
+" Plug 'powerline/powerline'
+" Plug 'plasticboy/vim-markdown'
+call plug#end()
+
 syntax on
 filetype plugin indent on
-
 set nocompatible
 set encoding=utf-8
 set showcmd
-set tabstop=2
-set shiftwidth=2
+set tabstop=4
+set shiftwidth=4
 set expandtab
 set smarttab
-set showtabline=2
+set showtabline=4
 set smartindent
 set ruler
 set hlsearch
@@ -31,6 +51,7 @@ set term=xterm-256color
 set foldmethod=syntax
 set background=dark
 set laststatus=2
+set backspace=indent,eol,start
 
 let base16colorspace=256
 colorscheme base16-ocean
@@ -42,7 +63,7 @@ nmap j gj
 nmap k gk
 
 nmap <F8> :NERDTreeTabsToggle<CR>
-nmap <F9> :TagbarToggle<CR>
+" nmap <F9> :TagbarToggle<CR>
 
 nmap ¡ 1gt
 nmap ™ 2gt
@@ -75,8 +96,7 @@ nmap <silent> <A-Down>  :wincmd j<CR>
 nmap <silent> <A-Left>  :wincmd h<CR>
 nmap <silent> <A-Right> :wincmd l<CR>
 
-let g:nerdtree_tabs_open_on_console_startup = 1
+let g:nerdtree_tabs_open_on_console_startup = 0
 let g:nerdtree_tabs_no_startup_for_diff = 0
 let g:nerdtree_tabs_smart_startup_focus = 1
-
-let g:airline_powerline_fonts = 1
+let g:airline_powerline_fonts = 0
